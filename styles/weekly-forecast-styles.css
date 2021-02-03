@@ -1,0 +1,206 @@
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: url("../assets/fonts/Nunito-Bold.ttf");
+}
+
+
+/*
+    some frequently-used variables in this file
+*/
+
+:root {
+    --humidity-degree-color: #b0b7b9;
+    --progress-color: #cf3504;
+    --progress-background: #d3e5f7;
+}
+
+* {
+    font-family: 'Nunito-Bold';
+}
+
+
+/*
+    Responsive design specific to the forecast component is used to ensure 
+    variable-screen-friendly content
+*/
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*
+    this is the container of which  all elements will be added/styled
+*/
+
+body .data-container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-wrap: break-word;
+    overflow: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body .data-container::-webkit-scrollbar {
+    display: none;
+}
+
+body .data-container .breaker {
+    height: 3vh;
+}
+
+body .data-container .flex-data-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+    align-self: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: fit-content;
+}
+
+body .data-container .flex-data-row .data-row {
+    display: grid;
+    width: fit-content;
+    grid-template-areas: 'day-element humidity-element forecast-element night-degree-element precipitation morning-degree-element';
+    grid-auto-columns: max-content;
+}
+
+body .data-container .flex-data-row .data-row .day-element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 13vw;
+    min-height: 0.5vw;
+    /*
+        this attribute defines a specific name for a grid area, used to assign
+        a space in the grid system for this area
+    */
+    grid-area: day-element;
+}
+
+body .data-container .flex-data-row .data-row .humidity-element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 10vw;
+    /*
+        this attribute defines a specific name for a grid area, used to assign
+        a space in the grid system for this area
+    */
+    grid-area: humidity-element;
+}
+
+body .data-container .flex-data-row .data-row .humidity-element .humidity-icon {
+    height: 25px;
+    position: relative;
+    top: 7px;
+}
+
+body .data-container .flex-data-row .data-row .forecast-element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 10vw;
+    /*
+        this attribute defines a specific name for a grid area, used to assign
+        a space in the grid system for this area
+    */
+    grid-area: forecast-element;
+}
+
+body .data-container .flex-data-row .data-row .forecast-element .forecast-icon {
+    height: 50px;
+    position: relative;
+    top: -5px;
+}
+
+body .data-container .flex-data-row .data-row .night-degree-element {
+    display: flex;
+    color: var(--humidity-degree-color);
+    min-width: 4vw;
+    /*
+        this attribute defines a specific name for a grid area, used to assign
+        a space in the grid system for this area
+    */
+    grid-area: night-degree-element;
+}
+
+body .data-container .flex-data-row .data-row .night-degree-element .night-c {
+    position: relative;
+    top: 10px;
+}
+
+body .data-container .flex-data-row .data-row .precipitation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 24px;
+    /*
+        this attribute defines a specific name for a grid area, used to assign
+        a space in the grid system for this area
+    */
+    grid-area: precipitation;
+    float: right;
+    width: fit-content;
+    padding-top: 6px;
+}
+
+body .data-container .flex-data-row .data-row .precipitation .dash-before {
+    display: flex;
+    padding-left: 5px;
+}
+
+body .data-container .flex-data-row .data-row .precipitation #progress {
+    position: relative;
+    top: 2px;
+    overflow: hidden;
+    border: 0px solid;
+    direction: rtl;
+    min-width: 10vw;
+    background-color: var(--progress-background);
+    border-radius: 20px;
+}
+
+body .data-container .flex-data-row .data-row .precipitation #progress .bar {
+    border: inherit;
+    border-radius: 0px 20px 20px 0px;
+    max-width: 100%;
+    width: 0%;
+    height: 20px;
+    background-color: var(--progress-color);
+}
+
+body .data-container .flex-data-row .data-row .precipitation .dash-after {
+    padding-right: 5px;
+}
+
+body .data-container .flex-data-row .data-row .morning-degree-element {
+    display: flex;
+    /*
+        this attribute defines a specific name for a grid area, used to assign
+        a space in the grid system for this area
+    */
+    grid-area: morning-degree-element;
+    min-width: fit-content;
+    padding-left: 20px;
+}
+
+body .data-container .flex-data-row .data-row .morning-degree-element .morning-c {
+    position: relative;
+    top: 10px;
+}
+
+.categories {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+/*# sourceMappingURL=weekly-forecast-styles.css.map */

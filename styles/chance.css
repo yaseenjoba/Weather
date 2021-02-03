@@ -1,0 +1,74 @@
+:root {
+    --height: 30vh;
+    --width: 20px;
+}
+
+.content {
+    overflow-x: scroll;
+    display: block;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: auto;
+    /* Firefox */
+    position: relative;
+    min-height: 240px;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.parent-table {
+    height: var(--height);
+}
+
+.parent-table tr {
+    margin: 5px 10px;
+}
+
+.parent-table tr td {
+    margin: 5px 10px;
+    padding: 10px 5px;
+}
+
+.child-table {
+    position: relative;
+    height: var(--height);
+    width: 100%;
+    margin: 0 20px;
+}
+
+.child-table tr {
+    margin: 0 20px;
+    align-items: center;
+}
+
+.child-table tr td {
+    margin: 0 20px;
+    align-items: center;
+}
+
+td,
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: var(--height);
+    width: var(--width);
+    position: relative;
+}
+
+.all-prog {
+    height: var(--height);
+    width: var(--width);
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    min-height: 0%;
+    z-index: 4;
+}

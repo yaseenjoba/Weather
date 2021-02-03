@@ -1,0 +1,134 @@
+.first-section {
+    height: 50%;
+    padding-top: 20px;
+    width: 100%;
+    position: relative;
+    color: white;
+}
+
+.sections p {
+    margin-bottom: 0;
+}
+
+#temp-degree {
+    font-size: 30px;
+    vertical-align: 50%;
+    content: "\2103";
+}
+
+i {
+    font-size: 30px;
+    padding-left: 5px;
+}
+
+#temp {
+    font-size: 80px;
+    font-family: 'Nunito', sans-serif;
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+
+#temp-degree {
+    font-size: 30px;
+    content: "\2103";
+}
+
+.today-summary {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+#today-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#weather-icon {
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.tempreture-and-location-summary {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    padding-top: 5px;
+    position: relative;
+}
+
+.other-info-summary {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+
+.other-info-summary i {
+    padding: 8px;
+}
+
+.other-info-summary p,
+.tempreture-and-location-summary p {
+    display: inline;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+:root {
+    --height: 200px;
+    --width: 20px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.parent-table {
+    height: var(--height);
+}
+
+.parent-table tr {
+    margin: 5px 10px;
+}
+
+.parent-table tr td {
+    margin: 5px 10px;
+    padding: 10px 5px;
+}
+
+.child-table {
+    position: relative;
+    height: var(--height);
+    width: 100%;
+    margin: 0 20px;
+}
+
+.child-table tr {
+    margin: 0 20px;
+    align-items: center;
+}
+
+.child-table tr td {
+    margin: 0 20px;
+    align-items: center;
+}
+
+td,
+h1 {
+    color: white;
+}
+
+#location {
+    padding-top: 15px;
+}

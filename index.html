@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSEU Weather</title>
+    <link rel="stylesheet" href="styles/weekly-forecast-styles.css">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/search-box.css">
+    <link rel="stylesheet" href="styles/chart.css">
+    <link rel="stylesheet" href="styles/right-column.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/chance.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body onload="getInitialData()">
+
+    <div class="container-fluid">
+        <div class="row" style="height: 100vh;">
+            <div class="col-md-8" style="background-color: #f2fbff;">
+                <div class="main-section row">
+                    <div class="col-md-7">
+                        <p class="title">Weather Forcast</p>
+                    </div>
+                    <div class="col-md-5">
+                        <input id="autocomplete" list="cities" class="form-control" onchange="changeWeatherData()" onkeyup="cityResultsBuilder()" placeholder="Enter a City name" type="text" />
+                    </div>
+                    <datalist id="cities">
+                    </datalist>
+                </div>
+                <div class="data-container" id="data-container">
+                </div>
+                <div class="chart-card">
+                    <div class="head">
+                        <span class="info">Weather</span>
+                        <span class="highest-temp-style">Highest temp <span id="highest-temp">30</span><span>°C</span></span>
+                        <span class="lowest-temp-style">Lowest temp <span id="lowest-temp">30</span><span>°C</span></span>
+                        <div class="list-of-days">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle font-style" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Today
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#" onclick="today()">Today</a>
+                                    <a class="dropdown-item" href="#" onclick="tomorrow()">Tomorrow</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas id="my-chart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding: 0;background-color:#11103a;">
+                <div class="first-section">
+                    <div class="today-summary">
+                        <span id="weather-icon" style="color: rgb(73, 193, 248);font-size:25px;" class="fas fa-cloud"></span>
+                        <div id="today-info">
+                            <span>Today</span><br>
+                            <span></span>
+                            <span id="weekday">Fri</span>,
+                            <span id="day-number">11</span>
+                            <span id='month-name'>NOV</span>
+                        </div>
+                    </div>
+                    <div class="tempreture-and-location-summary">
+                        <span id="temp">29</span>
+                        <span id="location">
+                                <span id ="city-name">Delhi</span>, <span id="country-name">India</span>
+                        </span>
+                        <span>Feels like <span id="feels-like">32</span> &#8226; Sunset <span id="sunset-time">18:15</span></span>
+                    </div>
+                    <div class="other-info-summary">
+                        <div>
+                            <i style="color: rgb(143, 175, 173);" class="fas fa-wind"></i>
+                            <span><span id="wind-speed">12</span>m/h</span>
+                        </div>
+                        <div>
+                            <i style="color: rgb(59, 88, 216);" class="fas fa-compass"></i>
+                            <span><span id="humidity">55</span>%</span>
+                        </div>
+                        <div>
+                            <i style="color: rgb(67, 151, 151);" class="fas fa-arrow-down"></i>
+                            <span id="pressure">99<span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <table style="overflow-x: auto;" class="parent-table">
+                            <div style="color: white;margin-top: 15px;font-size: large;text-align: start;padding-left: 50px;opacity: 0,7;">
+                                <span>Chance of Rain</span>
+                        </div>
+                        <tr id="first-row-in-chance">
+                        </tr>
+                        <tr id="second-row-in-chance">
+                        </tr>
+                        <tr id="third-row-in-chance">
+                        </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/fetchwether-data.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
+        <script src="js/weekly-forecast.js"></script>
+        <script src="js/summary-column.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/search-bar.js"></script>
+        <script src="js/chart.js"></script>
+        <script src="js/chance.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+</body>
+
+</html>

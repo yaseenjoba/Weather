@@ -1,0 +1,56 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.chart-card {
+    margin-top: 15px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 20px;
+    background-color: #f2fbff;
+    padding: 8px;
+    height: 60vh;
+}
+
+.info {
+    font-weight: 500;
+    font-size: 15px;
+    float: left;
+    padding-left: 30px;
+}
+
+.highest-temp-style {
+    font-weight: 500;
+    color: #a7c978;
+    font-size: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.lowest-temp-style {
+    font-weight: 500;
+    color: #bec6f1;
+    font-size: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.list-of-days {
+    font-size: 15px;
+    color: black;
+    padding-right: 30px;
+    float: right;
+}
+
+.font-style {
+    color: black;
+    font-weight: 500;
+}
+
+.head {
+    padding-top: 10px;
+    text-align: center;
+    float: none;
+}
